@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Header from './components/Header';
+import Concepts from './components/Concept';
+import concepts from './components/Constant';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <Header/>
+      <ul id="concepts">
+      <Concepts 
+     conceptual ={concepts[0]}
+     /> 
+        <Concepts 
+          conceptual ={concepts[1]}
+            />
+      <Concepts
+        conceptual ={concepts[2]}
+       />    
+      </ul>
+      <button onClick={()=>{console.log(" i have been clicked")}}>submitt</button>
     </div>
   );
 }
-
 export default App;
